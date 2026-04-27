@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     
-                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-creds') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-creds2') {
                         docker.image("${DOCKER_REPO}:latest").push()
                     }
                 }
